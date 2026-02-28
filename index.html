@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Mechanical Engineering Portfolio</title>
+  <meta name="description" content="Mechanical engineering portfolio: projects, experience, skills, and contact." />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- 3D model viewer (GLB) -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Go to top">
+      <span class="brand-mark" aria-hidden="true">Y</span>
+      <span class="brand-text">Your Name</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button class="btn ghost" id="themeToggle" type="button" aria-label="Toggle theme">Theme</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="kicker" id="headlineKicker">Senior Mechanical Engineering Student</p>
+        <h1 id="headlineTitle">Designing and building practical systems—mechanical design, prototyping, and mechatronics.</h1>
+        <p class="subhead" id="headlineSummary">
+          Brief positioning statement. Example: Focused on mechanism design, CAD, rapid prototyping, and integrating actuators and sensors for real-world testing.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn outline" href="assets/Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+
+        <div class="quick-facts">
+          <div class="fact">
+            <div class="fact-title">Location</div>
+            <div class="fact-value" id="factLocation">St. John’s, NL (or Remote)</div>
+          </div>
+          <div class="fact">
+            <div class="fact-title">Interests</div>
+            <div class="fact-value" id="factInterests">Mechanisms • Robotics • Prototyping</div>
+          </div>
+          <div class="fact">
+            <div class="fact-title">Availability</div>
+            <div class="fact-value" id="factAvailability">Internships • Capstone • Part-time</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Highlights">
+        <h2>Highlights</h2>
+        <ul class="checklist" id="highlightsList"></ul>
+
+        <div class="links" id="topLinks"></div>
+      </aside>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <p>Selected work with clear outcomes, constraints, and deliverables.</p>
+      </div>
+
+      <div class="grid" id="projectsGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-header">
+        <h2>Experience</h2>
+        <p>Short entries focused on scope, tools, and deliverables.</p>
+      </div>
+
+      <div class="stack" id="experienceStack"></div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-header">
+        <h2>Skills</h2>
+        <p>Scannable categories that match how recruiters evaluate engineering candidates.</p>
+      </div>
+
+      <div class="grid three" id="skillsGrid"></div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p>Direct links to reach out quickly.</p>
+      </div>
+
+      <div class="card contact" id="contactGrid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Your Name. Hosted on GitHub Pages.</p>
+  </footer>
+
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
