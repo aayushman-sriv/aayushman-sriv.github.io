@@ -1,13 +1,15 @@
-// Edit this file only to update portfolio content.
-// Add projects by copying an existing project object and adjusting fields.
+// projects.js
+// Single source of truth for portfolio content.
+// Edit this file to add/remove projects, change links, update skills, etc.
 
 window.PORTFOLIO = {
   person: {
-    name: "Your Name",
+    name: "Aayushman Srivastava",
     kicker: "Senior Mechanical Engineering Student",
-    title: "Designing and building practical systems—mechanical design, prototyping, and mechatronics.",
+    title:
+      "Mechanical design, prototyping, and mechatronics—focused on building practical systems and validating them through testing.",
     summary:
-      "Brief positioning statement. Example: Focused on mechanism design, CAD, rapid prototyping, and integrating actuators and sensors for real-world testing.",
+      "Portfolio of selected engineering work. Emphasis on mechanism design, CAD and drawings, rapid prototyping, and integrating actuators and sensors into testable prototypes.",
     facts: {
       location: "St. John’s, NL (or Remote)",
       interests: "Mechanisms • Robotics • Prototyping",
@@ -22,48 +24,51 @@ window.PORTFOLIO = {
     links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/" },
       { label: "GitHub", href: "https://github.com/" },
+      // Optional: update to a real link (Drive, Notion, PDF, etc.)
       { label: "Design Portfolio PDF", href: "#" },
     ],
   },
 
+  // PROJECTS
+  // Add more by copying one object and changing fields.
   projects: [
     {
-      title: "Docking Station Mechanism (Capstone)",
-      meta: "Mechanism Design • Mechatronics • Testing",
+      title: "Assembly 1 (Interactive 3D Model)",
+      meta: "3D CAD • Assembly • Web Viewer (GLB)",
       summary:
-        "Designed a docking station with Z-axis lift, XY planar tracking, and a stepper-actuated clamp.",
+        "Interactive 3D model embedded directly in the portfolio site for quick review of geometry and overall assembly layout.",
       bullets: [
-        "Designed frame and guide system; validated motion envelopes and tolerances.",
-        "Selected actuators and transmission; estimated loads, duty cycles, and safety factors.",
-        "Built prototype and defined acceptance tests and iteration plan.",
+        "Published a web-optimized GLB for fast loading and smooth interaction.",
+        "Used orbit/zoom controls to support quick design review without CAD software.",
+        "Structured the portfolio so each project can optionally include an interactive model.",
       ],
-      tags: ["CAD", "DFM", "Stepper", "Fixtures"],
-      // Optional: image shown above text (recommended if no 3D model)
-      image: { src: "assets/images/docking.jpg", alt: "Docking station prototype or render" },
-      // Optional: interactive 3D model viewer (GLB recommended)
+      tags: ["GLB", "CAD", "Assembly", "Portfolio"],
       model3d: {
         src: "assets/models/assembly-1.glb",
-        alt: "Docking station 3D model",
+        alt: "Assembly 1 3D model",
         heightPx: 320,
       },
       links: [
+        // Optional: add a case study page later (e.g., projects/assembly-1.html)
         { label: "Case Study", href: "#", style: "outline" },
-        { label: "Repo / Files", href: "#", style: "ghost" },
+        // Optional: link to original files or a repo folder
+        { label: "Files", href: "assets/models/assembly-1.glb", style: "ghost" },
       ],
     },
 
     {
-      title: "Robotics / Design Team System",
-      meta: "Prototyping • Integration • Field Use",
-      summary: "Subsystem design and build under schedule constraints, validated through real testing.",
+      title: "Docking Station Mechanism (Capstone)",
+      meta: "Mechanism Design • Mechatronics • Testing",
+      summary:
+        "Docking station concept featuring vertical positioning (Z), planar motion (X/Y), and a stepper-actuated clamp for securing a payload/platform.",
       bullets: [
-        "Designed and fabricated components with rapid iteration cycles.",
-        "Integrated actuators and sensors; improved reliability based on test outcomes.",
-        "Documented assembly steps and maintenance procedures for repeatability.",
+        "Defined motion requirements and interfaces; planned the frame and sliding mechanisms.",
+        "Mapped actuator and transmission options (belts/leadscrews) against load and speed needs.",
+        "Outlined a prototype and verification approach to reduce integration risk.",
       ],
-      tags: ["Prototyping", "Testing", "Integration"],
-      image: { src: "assets/images/hero.jpg", alt: "Project image" },
-      // No model3d field means no viewer renders
+      tags: ["Mechanisms", "CAD", "Stepper", "Integration"],
+      // Add a project image later if desired:
+      // image: { src: "assets/images/docking.jpg", alt: "Docking station render or prototype" },
       links: [
         { label: "Case Study", href: "#", style: "outline" },
         { label: "Media", href: "#", style: "ghost" },
@@ -71,57 +76,58 @@ window.PORTFOLIO = {
     },
   ],
 
+  // EXPERIENCE
   experience: [
     {
-      role: "Student Design Team — Role",
-      meta: "Organization • Dates",
+      role: "Student Design Team — Mechanical",
+      meta: "Memorial University of Newfoundland • Dates",
       bullets: [
-        "Owned subsystem design from requirements to prototype.",
-        "Produced CAD, drawings, and test plan; coordinated with electrical and software workflows.",
+        "Designed and fabricated mechanical subsystems under schedule constraints.",
+        "Produced CAD and documentation to support assembly, maintenance, and handoff.",
       ],
     },
     {
-      role: "Startup / Research / Club — Role",
-      meta: "Organization • Dates",
+      role: "Project Work — Prototyping and Integration",
+      meta: "Independent / Team Projects • Dates",
       bullets: [
-        "Built and iterated prototypes; improved performance based on test results.",
-        "Created documentation for handoff and repeatability.",
+        "Built and iterated prototypes; improved reliability based on testing outcomes.",
+        "Integrated mechanical components with sensors/actuators and basic control logic.",
       ],
     },
   ],
 
+  // SKILLS
   skills: [
     {
       category: "Mechanical",
       items: [
-        "Mechanisms, fixtures, tolerance strategy",
-        "Load paths and design justification",
-        "Prototype iteration and test planning",
+        "Mechanisms and fixtures",
+        "Tolerance strategy and manufacturability mindset",
+        "Prototyping and test planning",
       ],
     },
     {
-      category: "Tools",
+      category: "CAD / Documentation",
       items: [
-        "CAD: SolidWorks / Fusion / Onshape",
-        "Drawings, BOM, revision control",
-        "Basic FEA (as applicable)",
+        "3D CAD modeling and assemblies",
+        "Engineering drawings and BOM organization",
+        "Revision control and clean deliverables",
       ],
     },
     {
       category: "Mechatronics",
       items: [
-        "Stepper motors, belts/leadscrews",
-        "Sensors, wiring, integration mindset",
-        "MATLAB/Python basics (as applicable)",
+        "Stepper motors and motion components (belts/leadscrews/rails)",
+        "Sensors and integration basics",
+        "MATLAB/Python (as applicable)",
       ],
     },
   ],
 
+  // CONTACT
   contact: [
     { label: "Email", value: "you@example.com", href: "mailto:you@example.com" },
     { label: "LinkedIn", value: "linkedin.com/in/your-handle", href: "https://www.linkedin.com/" },
     { label: "GitHub", value: "github.com/your-handle", href: "https://github.com/" },
   ],
-
 };
-
