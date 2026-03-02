@@ -42,7 +42,7 @@ window.PORTFOLIO = {
       image: { src: "assets/images/docking.jpg", alt: "Docking station prototype or render" },
       // Optional: interactive 3D model viewer (GLB recommended)
       model3d: {
-        src: "assets/models/Assembly 1 (1).glb",
+        src: "assets/models/assembly-1.glb",
         alt: "Docking station 3D model",
         heightPx: 320,
       },
@@ -124,3 +124,4 @@ window.PORTFOLIO = {
   ],
 
 };
+
