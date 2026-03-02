@@ -42,7 +42,7 @@ window.PORTFOLIO = {
       image: { src: "assets/images/docking.jpg", alt: "Docking station prototype or render" },
       // Optional: interactive 3D model viewer (GLB recommended)
       model3d: {
-        src: "assets/models/docking-station.glb",
+        src: "assets/models/Assembly 1 (1).glb",
         alt: "Docking station 3D model",
         heightPx: 320,
       },
@@ -122,4 +122,5 @@ window.PORTFOLIO = {
     { label: "LinkedIn", value: "linkedin.com/in/your-handle", href: "https://www.linkedin.com/" },
     { label: "GitHub", value: "github.com/your-handle", href: "https://github.com/" },
   ],
+
 };
