@@ -197,7 +197,7 @@ window.PORTFOLIO_DATA = {
     links: [
       { label: "Email", value: "aayushmans@mun.ca", href: "mailto:aayushmans@mun.ca" },
       { label: "LinkedIn", value: "linkedin.com/in/aayushman-s", href: "https://www.linkedin.com/in/aayushman-s/" },
-      { label: "Resume", value: "assets/Resume.pdf", href: "assets/Resume.pdf" },
+      { label: "Resume", value: "Resume.pdf", href: "assets/Resume.pdf" },
     ],
   },
 };
