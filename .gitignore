@@ -1,0 +1,5 @@
+debug-*.png
+chrome-profile/
+edge-profile/
+.DS_Store
+Thumbs.db
