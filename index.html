@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aayushman Srivastava | Mechanical Engineering Portfolio</title>
+  <meta
+    name="description"
+    content="Mechanical engineering portfolio with interactive 3D models, project descriptions, accessible themes, and resume links."
+  />
+  <link rel="stylesheet" href="styles.css?v=20260507-1" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.164.1/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#showcase" aria-label="Aayushman Srivastava portfolio home">
+      <span class="brand-mark" aria-hidden="true">AS</span>
+      <span class="brand-text">
+        <strong id="brandName">Aayushman Srivastava</strong>
+        <small>Senior Mechanical Engineering Student</small>
+      </span>
+    </a>
+
+    <nav class="section-tabs" aria-label="Portfolio sections">
+      <a href="#showcase" data-nav-link>Showcase</a>
+      <a href="#about" data-nav-link>About</a>
+      <a href="#models" data-nav-link>Models</a>
+      <a href="#contact" data-nav-link>Contact</a>
+    </nav>
+
+    <div class="theme-toggle" role="group" aria-label="Theme">
+      <button type="button" data-theme-option="dark">Dark</button>
+      <button type="button" data-theme-option="light">Light</button>
+      <button type="button" data-theme-option="color-safe" aria-label="Color safe theme">Safe</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="showcase" id="showcase" aria-labelledby="heroTitle">
+      <div class="showcase-copy">
+        <h1 id="heroTitle">Mechanical design, CAD assemblies, prototypes, and 3D model reviews.</h1>
+        <p class="hero-summary" id="heroSummary">
+          A portfolio for presenting mechanical projects through concise engineering context and interactive GLB previews.
+        </p>
+
+        <div class="hero-actions" id="heroLinks"></div>
+
+        <dl class="quick-facts" id="quickFacts"></dl>
+      </div>
+
+      <section class="viewer-panel" aria-labelledby="viewerTitle">
+        <div class="viewer-topbar">
+          <div>
+            <h2 id="viewerTitle">Featured assembly</h2>
+          </div>
+
+          <label class="select-label" for="modelSelect">
+            <span>Model</span>
+            <select id="modelSelect"></select>
+          </label>
+        </div>
+
+        <div class="viewer-frame" id="viewerFrame">
+          <div
+            id="modelViewer"
+            class="three-viewer"
+            role="img"
+            aria-label="Interactive 3D model viewer"
+          ></div>
+          <div id="slideshowViewer" class="slideshow-viewer" hidden></div>
+          <div class="interaction-cue" role="img" aria-label="Drag to rotate interactive 3D model">
+            <span class="cue-drag-path" aria-hidden="true"></span>
+            <svg class="cue-cursor" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <path class="cursor-fill" d="M7 3 25 21.2l-8.2 1.1 4.5 6.2-3.9 2.4-4.4-6.3L7 30V3Z" />
+            </svg>
+          </div>
+
+          <div class="viewer-fallback" id="viewerFallback" hidden>
+            <strong id="fallbackTitle">Model preview unavailable</strong>
+            <p id="fallbackText">Add the matching GLB file to assets/models and refresh the page.</p>
+          </div>
+        </div>
+
+        <div class="viewer-toolbar" aria-label="Model camera controls">
+          <button type="button" data-camera-view="front">Front</button>
+          <button type="button" data-camera-view="side">Side</button>
+          <button type="button" data-camera-view="top">Top</button>
+          <button type="button" data-camera-view="iso">Iso</button>
+          <button type="button" id="rotateToggle">Auto Rotate</button>
+          <button type="button" id="zoomIn">Zoom In</button>
+          <button type="button" id="zoomOut">Zoom Out</button>
+          <button type="button" id="resetCamera">Reset</button>
+        </div>
+
+        <article class="model-details" id="modelDetails" aria-live="polite"></article>
+      </section>
+    </section>
+
+    <section class="content-section about-section" id="about" aria-labelledby="aboutTitle">
+      <div class="section-heading">
+        <h2 id="aboutTitle">About Me</h2>
+      </div>
+      <div class="about-layout">
+        <div class="about-copy" id="aboutCopy"></div>
+        <aside class="focus-list" aria-labelledby="focusTitle">
+          <h3 id="focusTitle">Current Focus</h3>
+          <ul id="focusList"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="content-section" id="models" aria-labelledby="modelsTitle">
+      <div class="section-heading">
+        <h2 id="modelsTitle">Projects</h2>
+      </div>
+      <div class="model-grid" id="modelGrid"></div>
+    </section>
+
+    <section class="content-section contact-section" id="contact" aria-labelledby="contactTitle">
+      <div class="section-heading">
+        <h2 id="contactTitle">Internships, projects, and collaboration.</h2>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-copy">
+          <p id="contactIntro">I am open to mechanical design, product development, and prototyping opportunities.</p>
+        </div>
+        <div class="contact-links" id="contactLinks"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><span id="year"></span> Aayushman Srivastava. Built as a static portfolio site.</p>
+  </footer>
+
+  <div class="exit-prompt" id="exitPrompt" role="dialog" aria-modal="true" aria-labelledby="exitPromptMessage" hidden>
+    <div class="exit-prompt-panel">
+      <h2 class="exit-prompt-message" id="exitPromptMessage" aria-live="assertive">Did you hire me yet?</h2>
+      <div class="exit-prompt-actions" id="exitPromptActions"></div>
+    </div>
+  </div>
+
+  <script src="exit-prompt.js?v=20260506-7"></script>
+  <script src="projects.js?v=20260507-1"></script>
+  <script type="module" src="script.js?v=20260507-1"></script>
+</body>
+</html>
